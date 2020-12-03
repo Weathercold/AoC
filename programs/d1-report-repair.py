@@ -76,3 +76,6 @@ while flag:
                 print(inp[i] * inp[j] * inp[-1])
                 flag = False # Exits the while loop
                 break # Exits the for loop
+
+
+inpf.close() # Closes the input file
