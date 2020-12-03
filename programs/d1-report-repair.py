@@ -39,7 +39,7 @@ from os.path import abspath
 # get if you multiply them together?
 
 
-inpf = open(abspath(".\inputs\d1-report-repair.txt")) # Overrides stdin to text file in /inputs/
+inpf = open(abspath(".\inputs\d1-report-repair.txt")) # Opens the input file
 inp = [] # Stores all of the inputs
 flag = True
 while flag:
@@ -64,7 +64,7 @@ while flag:
 # In your expense report, what is the product of the three entries that sum to 2020?
 
 
-inpf.seek(0) # Reset the pointer
+inpf.seek(0) # Resets the pointer
 inp = [] # Stores all of the inputs
 flag = True
 while flag:
