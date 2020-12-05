@@ -70,7 +70,7 @@ matches = 0
 while (inp := inpf.readline().strip()): # Runs until the pointer reaches the end
     pos1, pos2, char, password = split("-| |: ", inp) # Reads and splits input
     # Checks if the password contains the character at exactly one of the intended positions
-    if (password[int(pos1)-1] == char) + (password[int(pos2)-1] == char) == 1:
+    if (password[int(pos1)-1] == char) ^ (password[int(pos2)-1] == char):
         matches += 1
 print(matches)
 
