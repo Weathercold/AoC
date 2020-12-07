@@ -39,3 +39,6 @@ while (inp := inpf.readline()):
     if all([search(i, inp) for i in UPDATED_CHECKLIST]):
         valid_passports += 1
 print(valid_passports)
+
+
+inpf.close()

@@ -117,3 +117,6 @@ print(check_trees(1) *
       check_trees(5) *
       check_trees(7) *
       check_trees(1, 2))
+
+
+inpf.close()
