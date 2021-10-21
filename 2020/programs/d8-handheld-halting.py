@@ -55,7 +55,7 @@ def swap_command():
         index += 2
 
     
-with open(abspath(".\inputs\d8-handheld-halting.txt")) as inpf:
+with open(abspath(".\input\d8-handheld-halting.txt")) as inpf:
     program = [tuple(i.split()) for i in inpf]
     
     print(execute(program)[1])

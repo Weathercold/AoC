@@ -68,7 +68,7 @@ from os.path import abspath
 # trees would you encounter?
 
 
-inpf = open(abspath(".\inputs\d3-toboggan-trajectory.txt")) # Opens the input file
+inpf = open(abspath(".\input\d3-toboggan-trajectory.txt")) # Opens the input file
 trees = 0
 pointer = 0
 while (inp := inpf.readline().strip()): # Runs until the pointer reaches the end

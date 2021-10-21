@@ -15,7 +15,7 @@ def readpassport(func):
     return deco_readpassport
 
 
-inpf = open(abspath(".\inputs\d4-passport-processing.txt"))
+inpf = open(abspath(".\input\d4-passport-processing.txt"))
 inpf.readline = readpassport(inpf.readline)
 valid_passports = 0
 while (inp := inpf.readline()):

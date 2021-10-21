@@ -39,7 +39,7 @@ from os.path import abspath
 # get if you multiply them together?
 
 
-inpf = open(abspath(".\inputs\d1-report-repair.txt")) # Opens the input file
+inpf = open(abspath(".\input\d1-report-repair.txt")) # Opens the input file
 inp = [] # Stores all of the inputs
 flag = True
 while flag:

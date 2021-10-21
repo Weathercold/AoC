@@ -16,7 +16,7 @@ def transform(subject_number: int, loop_size: int) -> int:
 
 
 def main():
-    inpf = open(abspath(".\inputs\d25-combo-breaker.txt"))
+    inpf = open(abspath(".\input\d25-combo-breaker.txt"))
     card_public_key, door_public_key = map(int, inpf.readlines())
     card_loop_size, door_loop_size = rtransform(card_public_key), rtransform(door_public_key)
     card_encryption_key, door_encryption_key = transform(door_public_key, card_loop_size), transform(card_public_key, door_loop_size)
