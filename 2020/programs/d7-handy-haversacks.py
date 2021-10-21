@@ -33,7 +33,7 @@ class Bag(object):
         return items
 
 
-inpf = open(abspath(".\input\d7-handy-haversacks.txt"))
+inpf = open(abspath(r".\2020\input\d7-handy-haversacks.txt"))
 bag_types: Dict[str, Bag] = {}
 for inp in inpf:
     parsed_inp = split(" bag(?:s)?(?:, |\.)?(?: contain )?", inp)

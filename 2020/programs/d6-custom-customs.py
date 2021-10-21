@@ -1,7 +1,7 @@
 from os.path import abspath
 
 
-inpf = open(abspath(".\input\d6-custom-customs.txt"))
+inpf = open(abspath(r".\2020\input\d6-custom-customs.txt"))
 identifieds = 0
 inp = " "
 while inp:

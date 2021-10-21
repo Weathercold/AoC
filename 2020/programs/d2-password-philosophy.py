@@ -33,7 +33,7 @@ from re import split, fullmatch
 # How many passwords are valid according to their policies?
 
 
-inpf = open(abspath(".\input\d2-password-philosophy.txt")) # Opens the input file
+inpf = open(abspath(r".\2020\input\d2-password-philosophy.txt")) # Opens the input file
 matches = 0
 while (inp := inpf.readline().strip()): # Runs until the pointer reaches the end
     min, max, char, password = split("-| |: ", inp) # Reads and splits input
