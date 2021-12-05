@@ -1,4 +1,3 @@
-from os.path import abspath
 from functools import reduce
 
 
@@ -6,7 +5,7 @@ ROWS = (0, 127)
 COLUMNS = (0, 7)
 
 
-inpf = open(abspath(r".\2020\input\d5-binary-boarding.txt"))
+inpf = open(r".\2020\input\d5-binary-boarding.txt")
 highest_id = 0
 binary_locate = lambda loc, side: (loc[0], (loc[0] + loc[1]) // 2) if side in ["F", "L"] else ((loc[0] + loc[1] + 1) // 2, loc[1])
 while (inp := inpf.readline().strip()):

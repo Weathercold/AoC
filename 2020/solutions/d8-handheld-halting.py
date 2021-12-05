@@ -1,4 +1,3 @@
-from os.path import abspath
 from itertools import chain
 
 
@@ -55,7 +54,7 @@ def swap_command():
         index += 2
 
     
-with open(abspath(r".\2020\input\d8-handheld-halting.txt")) as inpf:
+with open(r".\2020\input\d8-handheld-halting.txt") as inpf:
     program = [tuple(i.split()) for i in inpf]
     
     print(execute(program)[1])

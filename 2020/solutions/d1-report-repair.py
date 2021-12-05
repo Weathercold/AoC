@@ -1,6 +1,3 @@
-from os.path import abspath
-
-
 # --- Day 1: Report Repair ---
 
 # After saving Christmas five years in a row, you've decided to take a vacation at a nice resort on
@@ -39,7 +36,7 @@ from os.path import abspath
 # get if you multiply them together?
 
 
-inpf = open(abspath(r".\2020\input\d1-report-repair.txt")) # Opens the input file
+inpf = open(r".\2020\input\d1-report-repair.txt") # Opens the input file
 inp = [] # Stores all of the inputs
 flag = True
 while flag:

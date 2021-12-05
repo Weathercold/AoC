@@ -1,6 +1,5 @@
-from os.path import abspath
 from re import split
-from functools import cached_property, lru_cache
+from functools import cached_property, cache
 from itertools import chain
 from typing import Iterator, Dict, List, Tuple
 
@@ -11,12 +10,12 @@ class Bag(object):
         self.bag_color = bag_color
         self.contains = contains if contains != [("no", "other")] else []
     
-    @lru_cache
+    @cache
     def __len__(self) -> int:
         length = sum(bag_types[i[1]]._rec__len__() * int(i[0]) for i in self.contains)
         return length
     
-    @lru_cache
+    @cache
     def _rec__len__(self) -> int:
         length = sum(bag_types[i[1]]._rec__len__() * int(i[0]) for i in self.contains) + 1
         return length
@@ -33,10 +32,10 @@ class Bag(object):
         return items
 
 
-inpf = open(abspath(r".\2020\input\d7-handy-haversacks.txt"))
+inpf = open(r".\2020\input\d7-handy-haversacks.txt")
 bag_types: Dict[str, Bag] = {}
 for inp in inpf:
-    parsed_inp = split(" bag(?:s)?(?:, |\.)?(?: contain )?", inp)
+    parsed_inp = split(r" bag(?:s)?(?:, |\.)?(?: contain )?", inp)
     parsed_items = [tuple(split(" ", i, 1)) for i in parsed_inp[1:-1]]
     bag_types.update({parsed_inp[0]: Bag(parsed_inp[0], parsed_items)})
 

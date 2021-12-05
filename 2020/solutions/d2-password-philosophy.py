@@ -1,7 +1,3 @@
-from os.path import abspath
-from re import split, fullmatch
-
-
 # --- Day 2: Password Philosophy ---
 
 # Your flight departs in a few days from the coastal airport; the easiest way down to the coast
@@ -33,7 +29,10 @@ from re import split, fullmatch
 # How many passwords are valid according to their policies?
 
 
-inpf = open(abspath(r".\2020\input\d2-password-philosophy.txt")) # Opens the input file
+from re import split, fullmatch
+
+
+inpf = open(r".\2020\input\d2-password-philosophy.txt") # Opens the input file
 matches = 0
 while (inp := inpf.readline().strip()): # Runs until the pointer reaches the end
     min, max, char, password = split("-| |: ", inp) # Reads and splits input

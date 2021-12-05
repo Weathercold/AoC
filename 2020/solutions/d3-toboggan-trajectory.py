@@ -1,6 +1,3 @@
-from os.path import abspath
-
-
 # --- Day 3: Toboggan Trajectory ---
 
 # With the toboggan login problems resolved, you set off toward the airport. While travel by
@@ -68,7 +65,7 @@ from os.path import abspath
 # trees would you encounter?
 
 
-inpf = open(abspath(r".\2020\input\d3-toboggan-trajectory.txt")) # Opens the input file
+inpf = open(r".\2020\input\d3-toboggan-trajectory.txt") # Opens the input file
 trees = 0
 pointer = 0
 while (inp := inpf.readline().strip()): # Runs until the pointer reaches the end
